@@ -15,5 +15,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiar código
 COPY . .
 
-# Ejecutar migraciones y servidor
 CMD python manage.py migrate && gunicorn taskproject.wsgi --bind 0.0.0.0:$PORT
